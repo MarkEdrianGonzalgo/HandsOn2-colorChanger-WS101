@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <title>Act. 2</title>
+    <style>
+        button {
+            border-color: darkslategrey;
+            background-color: teal;
+            border: 2px outset;
+            border-radius: 15px;
+            margin-right: 30px;
+            padding: 10px;
+            width: 150px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: slategrey;
+            box-shadow: black;
+            font-weight: bold;
+        }
+
+        #colorBox {
+            background-color: green;
+            height: 100px;
+            margin: auto;
+            margin-top: 10px;
+            flex-direction: column;
+            padding: 5px;
+            max-width: 300px;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: teal;
+        }
+
+        body {
+            background-image: linear-gradient(to right, cyan, darkcyan);
+            text-align: center;
+            margin-top: 180px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+        h1{
+            color: azure;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> JavaScript colorChanger() <br> Hands-On</h1>
+    <div id="colorBox"></div>
+    <br>
+    <button id="changeColorBtn">Click Me</button>
+    
+    <script>
+        const colorBox = document.getElementById("colorBox");
+        let changeColorBtn = document.getElementById("changeColorBtn");
+
+        changeColorBtn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            if (colorBox.style.backgroundColor === "green") {
+                colorBox.style.backgroundColor = "blue";
+            } else {
+                colorBox.style.backgroundColor = "green";
+            }
+        }
+
+    </script>
+</body>
+</html>
